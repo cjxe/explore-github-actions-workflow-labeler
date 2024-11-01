@@ -9,6 +9,7 @@ jobs:
       contents: read
       pull-requests: write
     runs-on: ubuntu-latest
+    if: ${{ !github.event.pull_request.draft }}
     steps:
       - id: label-the-PR
         uses: actions/labeler@v5
