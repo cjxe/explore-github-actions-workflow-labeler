@@ -1,0 +1,24 @@
+ready for review:
+  - all:
+      - base-branch: 'dev'
+      - head-branch: ['ADS-', 'DS-']
+
+UAT release:
+  - all:
+      - base-branch: 'uat'
+      - head-branch: 'dev'
+
+UAT release fix:
+  - all:
+      - base-branch: 'uat'
+      - head-branch: '^(?!.*\bdev\b).*'
+
+PRD release:
+  - all:
+      - base-branch: 'prd'
+      - head-branch: 'uat'
+
+hotfix:
+  - all:
+      - base-branch: 'prd'
+      - head-branch: '^(?!.*\buat\b).*'
