@@ -1,1 +1,1 @@
-Lorem - DEV
+Lorem - DEVs
